@@ -11,7 +11,7 @@ const DebitRoute=require('./routes/Debit.Routes')
 const RollRoute=require('./routes/Roll.Routes');
 const Roll = require("./models/Roll");
 
-const allowedOrigins = ['http://localhost:3000', 'http://localhost:5173','https://expense-backed.onrender.com','https://hilarious-chaja-747f59.netlify.app'];
+const allowedOrigins = ['http://localhost:3000', 'http://localhost:5173','https://expense-backed.onrender.com','https://burhaniexpenses.netlify.app'];
 
 app.use(cors({
   origin: function (origin, callback) {
