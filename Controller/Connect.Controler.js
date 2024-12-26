@@ -1,7 +1,7 @@
 const conn=require('../db')
 exports.ConnectDb = async (req, resp) => {
     try {
-         await conn
+         await conn()
           resp.send("database connected");
     } catch (error) {
         console.error(error);
