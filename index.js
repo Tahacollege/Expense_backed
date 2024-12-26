@@ -33,7 +33,6 @@ app.use('/api/roll', RollRoute);
 app.use('/api/connect', ConnectRoute);
 app.get("/", async(req, res) => {
     var data=await conn
-  res.send(data);
 });
 
 
