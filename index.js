@@ -9,7 +9,7 @@ const port = 3000;
 const CreditRoute=require('./routes/Credit.Routes')
 const DebitRoute=require('./routes/Debit.Routes')
 const RollRoute=require('./routes/Roll.Routes');
-const Roll = require("./models/Roll");
+const ConnectRoute=require('./routes/Connect.Route');
 
 const allowedOrigins = ['http://localhost:3000', 'http://localhost:5173','https://expense-backed.onrender.com','https://burhaniexpenses.netlify.app'];
 
@@ -30,10 +30,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/api/credit', CreditRoute);
 app.use('/api/debit', DebitRoute);
 app.use('/api/roll', RollRoute);
+app.use('/api/connect', ConnectRoute);
 app.get("/", async(req, res) => {
     var data=await conn
-  res.send("Hello World!");
+  res.send(data);
 });
+
 
 app.listen(port, () => {
   console.log(`App listening on port ${port}!`);
