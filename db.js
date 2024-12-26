@@ -8,4 +8,4 @@ async function connection() {
     return conn;
 }
 
-module.exports = connection; // Export the function itself, not the result
+module.exports = connection(); // Export the function itself, not the result
