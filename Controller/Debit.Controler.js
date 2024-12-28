@@ -80,3 +80,16 @@ exports.ShowDebitDataByDate = async (req, resp) => {
         resp.status(500).send({ message: "Error fetching Debit data", error });
     }
 };
+
+exports.ShowRollData = async (req, resp) => {
+    try {
+        const data = await Debit.find({ 
+            "title":"New Roll"
+          });
+        resp.status(200).send(data);
+    } catch (error) {
+        console.error(error);
+        resp.status(500).send({ message: "Error fetching Debit data", error });
+    }
+};
+

@@ -5,6 +5,7 @@ router.post('/insertroll',RollController.RollData );
 router.get('/getroll',RollController.ShowRollData );
 router.get('/getrolldatabyid/:id',RollController.ShowRollDataById);
 router.get('/getrollbydate/:date',RollController.ShowRollDataByDate );
+router.get('/getrollsinfobydate/:date',RollController.ShowRollsDataByDate );
 router.put('/updateroll',RollController.UpdateRollData );
 router.delete('/deleterollbyid/:id',RollController.DeleteRollDataById );
 module.exports=router
